@@ -1,13 +1,24 @@
 <!DOCTYPE html>
-<html lang="ja"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>恋愛診断♡</title><style>body {font-family: "Hiragino Maru Gothic ProN", "Yu Gothic", "Meiryo", sans-serif;background: linear-gradient(135deg, #ffe0ec, #f9f0ff);display: flex;justify-content: center;align-items: center;height: 100vh;margin: 0;}
+<html lang="ja"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>恋愛診断♡</title><style>
+body {
+  font-family: "Hiragino Maru Gothic ProN", "Yu Gothic", "Meiryo", sans-serif;
+  background: linear-gradient(135deg, #ffe0ec, #f9f0ff);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* ← ここを height から min-height に変更 */
+  margin: 0;
+}
+
 .form-container {
   background: white;
   padding: 2em;
   border-radius: 15px;
   box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-  width: 80%;
+  width: 90%;
   max-width: 500px;
   text-align: center;
+  box-sizing: border-box; /* ← 追加 */
 }
 
 h2 {
@@ -22,6 +33,7 @@ input[type="text"] {
   border-radius: 10px;
   font-size: 1em;
   margin-bottom: 1em;
+  box-sizing: border-box; /* ← 追加（崩れ防止） */
 }
 
 button {
@@ -33,6 +45,8 @@ button {
   font-size: 1em;
   cursor: pointer;
   transition: background 0.3s ease;
+  width: 100%; /* ← PC でも崩れない */
+  box-sizing: border-box;
 }
 
 button:hover {
